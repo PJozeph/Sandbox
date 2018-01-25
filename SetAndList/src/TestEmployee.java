@@ -21,6 +21,5 @@ public class TestEmployee {
     public void sortDescendingBySalary(){
         Collections.sort(employeeList);
         Assert.assertEquals(employeeList.get(0).getFirstName(),"Andrea");
-
     }
 }

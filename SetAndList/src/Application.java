@@ -22,6 +22,9 @@ public class Application {
         Collections.sort(employeeList);
         printCollection(employeeList);
 
+
+        Collections.sort(employeeList,(p1,p2) ->p1.getFirstName().compareTo(p2.getFirstName()));
+
     }
 
     private static void printCollection(Collection<Employee> employees) {
