@@ -14,10 +14,7 @@ public class Java8 {
 
         System.out.println(upperCsaeLetters);
 
-        List<Employee> employees = new ArrayList<>();
-        employees.add(new Employee(0, "Anna", 452.100));
-        employees.add(new Employee(0, "Emse", 352.100));
-        employees.add(new Employee(0, "Ildiko", 652.100));
+        List<Employee> employees = (List<Employee>) EmployeeFactory.createEmployees();
 
         Calculator calculator = new Calculator(employees);
         calculator.getAllSalary();
@@ -25,8 +22,6 @@ public class Java8 {
         List <String> names = employees.stream().map(employee -> employee.getName()).collect(Collectors.toList());
 
         System.out.println(names);
-
-
 
     }
 }

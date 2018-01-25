@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Tester {
@@ -14,10 +13,7 @@ public class Tester {
 
     @Before
     public void ini(){
-        List<Employee> employees = new ArrayList<>();
-        employees.add(new Employee(0, "Anna", 400.100));
-        employees.add(new Employee(0, "Emse", 300.100));
-        employees.add(new Employee(0, "Ildiko", 600.100));
+        List<Employee> employees = (List<Employee>) EmployeeFactory.createEmployees();
         calculator = new Calculator(employees);
 
     }
