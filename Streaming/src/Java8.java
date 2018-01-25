@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class Java8 {
@@ -21,9 +19,14 @@ public class Java8 {
         employees.add(new Employee(0, "Emse", 352.100));
         employees.add(new Employee(0, "Ildiko", 652.100));
 
+        Calculator calculator = new Calculator(employees);
+        calculator.getAllSalary();
+
         List <String> names = employees.stream().map(employee -> employee.getName()).collect(Collectors.toList());
 
         System.out.println(names);
-        
+
+
+
     }
 }
