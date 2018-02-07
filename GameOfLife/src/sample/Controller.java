@@ -7,6 +7,9 @@ public class Controller {
 
     private  Board board;
 
+    public Controller() {
+    }
+
     public Controller(Board board) {
         this.board = board;
     }
