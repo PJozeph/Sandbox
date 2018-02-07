@@ -38,4 +38,8 @@ public class Board {
     public int getPoaitionY() {
         return poaitionY;
     }
+
+    public void setAlive(int x, int y){
+        this.getCell(x,y).setAlive(true);
+    }
 }

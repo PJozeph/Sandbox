@@ -16,7 +16,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         Group group = new Group();
-        Canvas canvas = new Canvas(300,275);
+        Canvas canvas = new Canvas(300,600);
         GraphicsContext gc = canvas.getGraphicsContext2D();
         drawShapes(gc);
         group.getChildren().add(canvas);
