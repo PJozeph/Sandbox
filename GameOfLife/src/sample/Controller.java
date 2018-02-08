@@ -31,8 +31,8 @@ public class Controller {
 
     public int calculateAliveNeighbors(Cell cell) {
         int counter = 0;
-        for (int i = cell.getGetPositionY() - 1; i < cell.getPositionX(); i++) {
-            for (int j = cell.getPositionX() - 1; j < cell.getPositionX(); j++) {
+        for (int i = cell.getPositionX() - 1; i <= cell.getPositionX() + 1 ; i++) {
+            for (int j = cell.getGetPositionY() - 1; j <= cell.getGetPositionY() +1; j++) {
                 try {
                     if (board.getCell(i, j).isAlive()) {
                         counter++;

@@ -3,6 +3,7 @@ package test;
 import model.Board;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import sample.Controller;
 
@@ -17,6 +18,7 @@ public class GameOfLifeTest {
         controller = new Controller(board);
     }
 
+    @Ignore
     @Test
     public void printBoardTest() {
         controller.printBoard();
@@ -25,7 +27,7 @@ public class GameOfLifeTest {
     @Test
     public void calculateAliveNegiborsTest() {
         board.setAlive(0,0);
-        board.setAlive(0,1);
+        board.setAlive(2,0);
         int aliveNeighbors = controller.calculateAliveNeighbors(board.getCell(1, 1));
         Assert.assertEquals(2, aliveNeighbors);
     }
